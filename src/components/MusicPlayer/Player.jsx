@@ -17,9 +17,9 @@ const Player = ({
 
   if (ref.current) {
     if (state.isPlaying) {
-      ref?.current?.play();
+      ref.current.play();
     } else {
-      ref?.current?.pause();
+      ref.current.pause();
     }
   }
 
