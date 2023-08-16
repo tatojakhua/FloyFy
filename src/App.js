@@ -20,7 +20,7 @@ function App() {
             <AppRoutes />
           </div>
           {state?.favoriteMusics?.length > 0 && (
-            <div className="xl:sticky relative top-0 h-fit">
+            <div className="xl:sticky xl:overflow-auto scrollbar-none xl:h-auto relative top-0 h-fit">
               <TopPlay />
             </div>
           )}
