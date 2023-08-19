@@ -26,7 +26,18 @@ const authReducer = (state, actions) => {
     }
     case Log_Out: {
       toggleLocalStorage();
-      return { ...state, isAuthenticated: false, user: null };
+      return {
+        isAuthenticated: false,
+        user: null,
+        currentSongs: [],
+        currentIndex: 0,
+        isActive: false,
+        isPlaying: false,
+        activeSong: {},
+        genreListId: "",
+        favoriteMusics: [],
+        history: [],
+      };
     }
     case Authenticate: {
       const user = parseJWT(payload);

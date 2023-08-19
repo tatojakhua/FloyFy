@@ -25,18 +25,18 @@ const Controls = ({
     dispatch(addFavoriteMusic());
   };
   return (
-    <div className="flex items-center justify-around md:w-36 lg:w-52 2xl:w-80">
+    <div className="flex items-center justify-between md:w-36 lg:w-52 2xl:w-80">
       <BsArrowRepeat
         size={20}
         color={repeat ? "red" : "white"}
         onClick={() => setRepeat((prev) => !prev)}
-        className="hidden sm:block cursor-pointer"
+        className="hidden sm:block cursor-pointer mr-1"
       />
       {state.currentSongs?.length && (
         <MdSkipPrevious
           size={30}
           color="#FFF"
-          className="cursor-pointer"
+          className="cursor-pointer mr-1"
           onClick={handlePrevSong}
         />
       )}
@@ -45,21 +45,21 @@ const Controls = ({
           size={45}
           color="#FFF"
           onClick={handlePlayPause}
-          className="cursor-pointer"
+          className="cursor-pointer mr-1"
         />
       ) : (
         <BsFillPlayFill
           size={45}
           color="#FFF"
           onClick={handlePlayPause}
-          className="cursor-pointer"
+          className="cursor-pointer mr-1"
         />
       )}
       {state.currentSongs?.length && (
         <MdSkipNext
           size={30}
           color="#FFF"
-          className="cursor-pointer"
+          className="cursor-pointer mr-1"
           onClick={handleNextSong}
         />
       )}
@@ -67,7 +67,7 @@ const Controls = ({
         size={20}
         color={shuffle ? "red" : "white"}
         onClick={() => setShuffle((prev) => !prev)}
-        className="hidden sm:block cursor-pointer"
+        className="hidden sm:block cursor-pointer mr-1"
       />
       <HiOutlineHeart
         size={25}
@@ -79,7 +79,7 @@ const Controls = ({
             : "white"
         }
         onClick={handleAddFavoriteMusic}
-        className="cursor-pointer"
+        className="cursor-pointer ml-1"
       />
     </div>
   );

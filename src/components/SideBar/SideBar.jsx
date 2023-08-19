@@ -5,22 +5,35 @@ import { RiCloseLine } from "react-icons/ri";
 import { links } from "../../assets/constants";
 import { HiOutlineMenu } from "react-icons/hi";
 import { logo } from "../../assets/index";
+import { HiOutlineLogout } from "react-icons/hi";
+import { useAuthContext } from "../../context/auth/AuthContextProvider";
+import { LogOut } from "../../context/actions/constants/actionCreators";
 
-const NavLinks = ({ handleClick }) => (
-  <div className="mt-10">
-    {links.map((item) => (
-      <Link
-        key={item.name}
-        to={item.to}
+const NavLinks = ({ handleClick }) => {
+  const { dispatch } = useAuthContext();
+  return (
+    <div className="mt-10">
+      {links.map((item) => (
+        <Link
+          key={item.name}
+          to={item.to}
+          className="flex flex-row justify-start items-center my-8 text-sm font-medium text-gray-400 hover:text-cyan-400"
+          onClick={() => handleClick()}
+        >
+          <item.icon className="w-6 h-6 mr-2" />
+          {item.name}
+        </Link>
+      ))}
+      <button
+        onClick={() => dispatch(LogOut())}
         className="flex flex-row justify-start items-center my-8 text-sm font-medium text-gray-400 hover:text-cyan-400"
-        onClick={() => handleClick()}
       >
-        <item.icon className="w-6 h-6 mr-2" />
-        {item.name}
-      </Link>
-    ))}
-  </div>
-);
+        <HiOutlineLogout className="w-6 h-6 mr-2" />
+        Log out
+      </button>
+    </div>
+  );
+};
 
 const SideBar = () => {
   const [mobileMenuOpen, setmobileMenuOpen] = useState(false);
