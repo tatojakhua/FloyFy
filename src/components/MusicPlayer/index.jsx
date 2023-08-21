@@ -46,18 +46,14 @@ const MusicPlayer = () => {
   };
 
   const handlePrevSong = () => {
-    setTimeout(() => {
-      dispatch(history(state.activeSong));
-      if (state.currentIndex === 0) {
-        dispatch(prevSong(state.currentSongs.length - 1));
-      } else if (shuffle) {
-        dispatch(
-          prevSong(Math.floor(Math.random() * state.currentSongs.length))
-        );
-      } else {
-        dispatch(prevSong(state.currentIndex - 1));
-      }
-    }, 500);
+    dispatch(history(state.activeSong));
+    if (state.currentIndex === 0) {
+      dispatch(prevSong(state.currentSongs.length - 1));
+    } else if (shuffle) {
+      dispatch(prevSong(Math.floor(Math.random() * state.currentSongs.length)));
+    } else {
+      dispatch(prevSong(state.currentIndex - 1));
+    }
   };
 
   return (

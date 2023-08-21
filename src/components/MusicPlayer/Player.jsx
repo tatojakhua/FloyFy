@@ -15,6 +15,7 @@ const Player = ({
   const ref = useRef(null);
   // eslint-disable-next-line no-unused-expressions
 
+  // useEffect(() => {
   if (ref.current) {
     if (state.isPlaying) {
       ref.current.play();
@@ -22,6 +23,7 @@ const Player = ({
       ref.current.pause();
     }
   }
+  // }, [state.activeSong]);
 
   useEffect(() => {
     ref.current.volume = volume;

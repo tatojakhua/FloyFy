@@ -1,6 +1,7 @@
 import axios from "axios";
 
 async function fetchMusicsByCountry(country) {
+  console.log(country, "test1");
   const options = {
     method: "GET",
     url: "https://shazam-core7.p.rapidapi.com/charts/get-top-songs-in_country_by_genre",

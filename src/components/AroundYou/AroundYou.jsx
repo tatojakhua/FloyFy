@@ -19,7 +19,6 @@ const AroundYou = () => {
       .catch((err) => setErr(err.message))
       .finally(() => setloading(false));
   }, [country]);
-
   if (loading && isFetching) return <Loader title="Loading songs around you" />;
   if (Err || error) return <Error />;
 
