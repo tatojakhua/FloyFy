@@ -6,12 +6,13 @@ const useFetchMusicsByCountry = (country) => {
   const [isLoading, setisLoading] = useState(true);
   const [error, seterror] = useState("");
   useEffect(() => {
-    console.log(country, "test2");
-    fetchMusicsByCountry(country)
-      .then((data) => setinfo(data.tracks))
-      .catch((err) => seterror(err.message))
-      .finally(() => setisLoading(false));
-  }, []);
+    if (country) {
+      fetchMusicsByCountry(country)
+        .then((data) => setinfo(data.tracks))
+        .catch((err) => seterror(err.message))
+        .finally(() => setisLoading(false));
+    }
+  }, [country]);
   return [info, isLoading, error];
 };
 

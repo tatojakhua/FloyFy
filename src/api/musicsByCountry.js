@@ -1,12 +1,11 @@
 import axios from "axios";
 
 async function fetchMusicsByCountry(country) {
-  console.log(country, "test1");
   const options = {
     method: "GET",
     url: "https://shazam-core7.p.rapidapi.com/charts/get-top-songs-in_country_by_genre",
     params: {
-      country_code: `${country || "GB"}`,
+      country_code: `${country}`,
       genre: "POP",
       limit: "50",
     },

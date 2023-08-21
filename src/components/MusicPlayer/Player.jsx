@@ -15,15 +15,18 @@ const Player = ({
   const ref = useRef(null);
   // eslint-disable-next-line no-unused-expressions
 
-  // useEffect(() => {
-  if (ref.current) {
-    if (state.isPlaying) {
-      ref.current.play();
-    } else {
-      ref.current.pause();
+  useEffect(() => {
+    if (ref.current) {
+      if (state.isPlaying) {
+        ref.current
+          .play()
+          .then(() => {})
+          .catch(() => {});
+      } else {
+        ref.current.pause();
+      }
     }
-  }
-  // }, [state.activeSong]);
+  }, [state.activeSong, state.isPlaying]);
 
   useEffect(() => {
     ref.current.volume = volume;
