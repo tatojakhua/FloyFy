@@ -1,9 +1,6 @@
-/* eslint-disable import/no-unresolved */
 /* eslint-disable react/prop-types */
 import React, { useEffect, useRef } from "react";
 import { useAuthContext } from "../../context/auth/AuthContextProvider";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { FreeMode } from "swiper";
 import PlayPause from "../PlayPause/PlayPause";
 import useFetchMusics from "../../hooks/useFetchMusics";
 import {
@@ -12,9 +9,6 @@ import {
   setActiveSong,
 } from "../../context/actions/constants/actionCreators";
 import { HiOutlineTrash } from "react-icons/hi";
-
-// import "swiper/css";
-// import "swiper/css/free-mode";
 
 const TopChartCard = ({
   song,
@@ -111,34 +105,6 @@ const TopPlay = () => {
           ))}
         </div>
       </div>
-      {/* <div className="w-full flex flex-col mt-8">
-        <div className="flex flex-row justify-between items-center">
-          <h2 className="text-white font-bold text-2xl">Top Artists</h2>
-        </div>
-        <Swiper
-          slidesPerView="auto"
-          spaceBetween={15}
-          freeMode
-          centeredSlides
-          centeredSlidesBounds
-          modules={[FreeMode]}
-          className="mt-4"
-        >
-          {topPlay?.map((song) => (
-            <SwiperSlide
-              key={song.key}
-              style={{ width: "25%", height: "auto" }}
-              className="shadow-lg rounded-full animate-slideright"
-            >
-              <img
-                alt="name"
-                src={song?.images.blurred}
-                className="rounded-full w-full object-cover"
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div> */}
     </div>
   );
 };

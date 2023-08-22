@@ -14,8 +14,8 @@ import pages from "../pages";
 
 export const routes = [
   { id: 0, path: HOME_PAGE, element: pages.Home, Guard: AuthGuard },
-  { id: 1, path: SIGN_IN, element: pages.SingIn, Guard: GuestGuard },
-  { id: 2, path: SIGN_UP, element: pages.SignUp, Guard: GuestGuard },
+  { id: 1, path: SIGN_IN, element: pages.SingInPage, Guard: GuestGuard },
+  { id: 2, path: SIGN_UP, element: pages.SignUpPage, Guard: GuestGuard },
   { id: 3, path: Around_You, element: pages.Around, Guard: AuthGuard },
   { id: 4, path: Top_Charts, element: pages.TopCartsPage, Guard: AuthGuard },
   { id: 5, path: SEARCH, element: pages.SearchPage, Guard: AuthGuard },

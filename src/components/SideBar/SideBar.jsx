@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { RiCloseLine } from "react-icons/ri";
-import { links } from "../../assets/constants";
+import { links } from "../../constants/constants";
 import { HiOutlineMenu } from "react-icons/hi";
 import { logo } from "../../assets/index";
 import { HiOutlineLogout } from "react-icons/hi";

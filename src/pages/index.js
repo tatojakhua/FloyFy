@@ -1,6 +1,6 @@
 import Home from "./home/Home";
-import SignUp from "./singUp/SignUp";
-import SingIn from "./singIn/SingIn";
+import SignUpPage from "./singUp/SignUpPage";
+import SingInPage from "./singIn/SingInPage";
 import Around from "./Aroundyou/Around";
 import Error from "./error/Error";
 import TopCartsPage from "./TopCharts/TopCartsPage";
@@ -9,8 +9,8 @@ import HistoryPage from "./History/HistoryPage";
 
 const pages = {
   Home,
-  SignUp,
-  SingIn,
+  SignUpPage,
+  SingInPage,
   Error,
   Around,
   TopCartsPage,

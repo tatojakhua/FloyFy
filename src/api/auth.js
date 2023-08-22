@@ -1,32 +1,42 @@
-const sigUp = async (user) => {
-  const url = `https://academyofdigitalindustriesbackend.onrender.com/api/v1/auth/register`;
-  const res = await fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-type": "application/json",
-    },
-    body: JSON.stringify(user),
-  });
-  const data = await res.json();
-  if (res.ok) {
-    return data;
+import axios from "axios";
+
+const signUp = async (user) => {
+  const url =
+    "https://academyofdigitalindustriesbackend.onrender.com/api/v1/auth/register";
+  try {
+    const response = await axios.post(url, user, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    return response.data;
+  } catch (error) {
+    if (error.response) {
+      throw new Error(error.response.data.msg);
+    } else {
+      throw new Error("An error occurred while making the request.");
+    }
   }
-  throw new Error(data.msg);
 };
 
-const sigIn = async (user) => {
-  const url = `https://academyofdigitalindustriesbackend.onrender.com/api/v1/auth/login`;
-  const res = await fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-type": "application/json",
-    },
-    body: JSON.stringify(user),
-  });
-  const data = await res.json();
-  if (res.ok) {
-    return data;
+const signIn = async (user) => {
+  const url =
+    "https://academyofdigitalindustriesbackend.onrender.com/api/v1/auth/login";
+  try {
+    const response = await axios.post(url, user, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    return response.data;
+  } catch (error) {
+    if (error.response) {
+      throw new Error(error.response.data.msg);
+    } else {
+      throw new Error("An error occurred while making the request.");
+    }
   }
-  throw new Error(data.msg);
 };
-export { sigUp, sigIn };
+export { signUp, signIn };

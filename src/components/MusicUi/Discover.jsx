@@ -1,6 +1,6 @@
 import React from "react";
 import useFetchMusics from "../../hooks/useFetchMusics";
-import { genres } from "../../assets/constants";
+import { genres } from "../../constants/constants";
 import SongCard from "../SongCard/SongCard";
 import Error from "../Error/Error";
 import Loader from "../Loader/Loader";
