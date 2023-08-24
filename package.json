@@ -12,7 +12,8 @@
     "react-scripts": "5.0.1",
     "react-select": "^5.7.2",
     "tailwindcss": "^3.3.3",
-    "three": "^0.155.0"
+    "framer-motion": "^10.12.18",
+    "react-tilt": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",

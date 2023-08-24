@@ -6,6 +6,7 @@ import TopPlay from "./components/TopPlay/TopPlay";
 import SearchBar from "./components/SearchBar/SearchBar";
 import MusicPlayer from "./components/MusicPlayer/index";
 import { useAuthContext } from "./context/auth/AuthContextProvider";
+import Header from "./components/LandingUI/Header";
 
 function App() {
   const { state } = useAuthContext();
@@ -21,6 +22,7 @@ function App() {
           }`}
         >
           <div className="flex-1 h-fit pb-40">
+            {!state.isAuthenticated && <Header />}
             <AppRoutes />
           </div>
           {state?.favoriteMusics?.length > 0 && (

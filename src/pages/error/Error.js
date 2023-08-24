@@ -14,7 +14,7 @@ const Error = () => {
       <h1 className="text-4xl font-bold tracking-tighter text-white leading-none m-4">
         Page not found
       </h1>
-      <span className="text-[#a7a7a7] inline-block font-extralight max-w-lg mb-8">
+      <span className="text-lg font-medium text-gray-400 inline-block max-w-lg mb-8">
         We can’t seem to find the page you are looking for.
       </span>
       <button

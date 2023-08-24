@@ -5,6 +5,7 @@ import {
   HiOutlineSearch,
 } from "react-icons/hi";
 import { Around_You, HOME_PAGE, Top_Charts, HISTORY } from "./routes";
+import { cartoon } from "../assets/index";
 
 export const genres = [
   { title: "Pop", value: "POP" },
@@ -28,6 +29,17 @@ export const links = [
   { name: "Around You", to: Around_You, icon: HiOutlinePhotograph },
   { name: "History", to: HISTORY, icon: HiOutlineSearch },
   { name: "Top Charts", to: Top_Charts, icon: HiOutlineHashtag },
+];
+
+export const PlaylistImgs = [
+  { id: 1, name: "Pop", image: cartoon },
+  { id: 2, name: "Hip-Hop", image: cartoon },
+  { id: 3, name: "Dance", image: cartoon },
+  { id: 4, name: "Electronic", image: cartoon },
+  { id: 5, name: "Soul", image: cartoon },
+  { id: 6, name: "Alternative", image: cartoon },
+  { id: 7, name: "Rock", image: cartoon },
+  { id: 8, name: "Reggae", image: cartoon },
 ];
 
 export const inputs = [
