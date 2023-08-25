@@ -5,7 +5,16 @@ import {
   HiOutlineSearch,
 } from "react-icons/hi";
 import { Around_You, HOME_PAGE, Top_Charts, HISTORY } from "./routes";
-import { cartoon } from "../assets/index";
+import {
+  Alternative,
+  Dance,
+  Electronic,
+  HIP_HOP,
+  POP,
+  Reggae,
+  Rock,
+  Soul,
+} from "../assets/index";
 
 export const genres = [
   { title: "Pop", value: "POP" },
@@ -32,14 +41,14 @@ export const links = [
 ];
 
 export const PlaylistImgs = [
-  { id: 1, name: "Pop", image: cartoon },
-  { id: 2, name: "Hip-Hop", image: cartoon },
-  { id: 3, name: "Dance", image: cartoon },
-  { id: 4, name: "Electronic", image: cartoon },
-  { id: 5, name: "Soul", image: cartoon },
-  { id: 6, name: "Alternative", image: cartoon },
-  { id: 7, name: "Rock", image: cartoon },
-  { id: 8, name: "Reggae", image: cartoon },
+  { id: 1, name: "Pop", image: POP },
+  { id: 2, name: "Hip-Hop", image: HIP_HOP },
+  { id: 3, name: "Dance", image: Dance },
+  { id: 4, name: "Electronic", image: Electronic },
+  { id: 5, name: "Soul", image: Soul },
+  { id: 6, name: "Alternative", image: Alternative },
+  { id: 7, name: "Rock", image: Rock },
+  { id: 8, name: "Reggae", image: Reggae },
 ];
 
 export const inputs = [

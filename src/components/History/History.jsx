@@ -1,11 +1,11 @@
 import React from "react";
 import SongCard from "../SongCard/SongCard";
-import { useAuthContext } from "../../context/auth/AuthContextProvider";
+import { useGlobalContext } from "../../context/auth/AuthContextProvider";
 import { clearTheHistory } from "../../context/actions/constants/actionCreators";
 import { HiOutlineTrash } from "react-icons/hi";
 
 const TopCharts = () => {
-  const { state, dispatch } = useAuthContext();
+  const { state, dispatch } = useGlobalContext();
   const data = state.history;
   const handleClearHistory = () => {
     dispatch(clearTheHistory());

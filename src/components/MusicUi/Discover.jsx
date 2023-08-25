@@ -4,11 +4,11 @@ import { genres } from "../../constants/constants";
 import SongCard from "../SongCard/SongCard";
 import Error from "../Error/Error";
 import Loader from "../Loader/Loader";
-import { useAuthContext } from "../../context/auth/AuthContextProvider";
+import { useGlobalContext } from "../../context/auth/AuthContextProvider";
 import { selectGenreListId } from "../../context/actions/constants/actionCreators";
 
 const Discover = () => {
-  const { state, dispatch } = useAuthContext();
+  const { state, dispatch } = useGlobalContext();
   const [musics, isLoading, error] = useFetchMusics(state.genreListId || "POP");
   if (isLoading) return <Loader title="Loading Songs..." />;
   if (error) return <Error />;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { signIn } from "../../api/auth";
-import { useAuthContext } from "../../context/auth/AuthContextProvider";
+import { useGlobalContext } from "../../context/auth/AuthContextProvider";
 import { LogIn } from "../../context/actions/constants/actionCreators";
 import { HOME_PAGE } from "../../constants/routes";
 import Loader from "../Loader/Loader";
@@ -16,7 +16,7 @@ const SignIn = () => {
   const navigate = useNavigate();
   const [loading, setloading] = useState(false);
   const [showPassword, setshowPassword] = useState(false);
-  const { dispatch } = useAuthContext();
+  const { dispatch } = useGlobalContext();
   const handleShowPassword = () => {
     setshowPassword((prev) => !prev);
   };

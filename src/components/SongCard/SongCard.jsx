@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { useAuthContext } from "../../context/auth/AuthContextProvider";
+import { useGlobalContext } from "../../context/auth/AuthContextProvider";
 import PlayPause from "../PlayPause/PlayPause";
 import {
   playPause,
@@ -8,7 +8,7 @@ import {
 } from "../../context/actions/constants/actionCreators";
 
 const SongCard = ({ song, i, data }) => {
-  const { state, dispatch } = useAuthContext();
+  const { state, dispatch } = useGlobalContext();
   const handlePauseClick = () => {
     dispatch(playPause(false));
   };

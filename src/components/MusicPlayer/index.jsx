@@ -10,10 +10,10 @@ import Player from "./Player";
 import Seekbar from "./Seekbar";
 import Track from "./Track";
 import VolumeBar from "./VolumeBar";
-import { useAuthContext } from "../../context/auth/AuthContextProvider";
+import { useGlobalContext } from "../../context/auth/AuthContextProvider";
 
 const MusicPlayer = () => {
-  const { state, dispatch } = useAuthContext();
+  const { state, dispatch } = useGlobalContext();
   const [duration, setDuration] = useState(0);
   const [seekTime, setSeekTime] = useState(0);
   const [appTime, setAppTime] = useState(0);

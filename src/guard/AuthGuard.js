@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { useAuthContext } from "../context/auth/AuthContextProvider";
+import { useGlobalContext } from "../context/auth/AuthContextProvider";
 import LandingPage from "../pages/Landing/LandingPage";
 
 const AuthGuard = ({ children }) => {
-  const { state } = useAuthContext();
+  const { state } = useGlobalContext();
   return <div>{state.isAuthenticated ? children : <LandingPage />}</div>;
 };
 

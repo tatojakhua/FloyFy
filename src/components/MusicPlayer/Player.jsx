@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/media-has-caption */
 import React, { useRef, useEffect } from "react";
-import { useAuthContext } from "../../context/auth/AuthContextProvider";
+import { useGlobalContext } from "../../context/auth/AuthContextProvider";
 
 const Player = ({
   volume,
@@ -11,7 +11,7 @@ const Player = ({
   onLoadedData,
   repeat,
 }) => {
-  const { state } = useAuthContext();
+  const { state } = useGlobalContext();
   const ref = useRef(null);
   // eslint-disable-next-line no-unused-expressions
 

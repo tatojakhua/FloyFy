@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useRef } from "react";
-import { useAuthContext } from "../../context/auth/AuthContextProvider";
+import { useGlobalContext } from "../../context/auth/AuthContextProvider";
 import PlayPause from "../PlayPause/PlayPause";
 import useFetchMusics from "../../hooks/useFetchMusics";
 import {
@@ -60,7 +60,7 @@ const TopChartCard = ({
 );
 
 const TopPlay = () => {
-  const { state, dispatch } = useAuthContext();
+  const { state, dispatch } = useGlobalContext();
   const [data] = useFetchMusics();
   const divRef = useRef(null);
   const topPlay = state.favoriteMusics;

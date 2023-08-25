@@ -6,11 +6,11 @@ import { links } from "../../constants/constants";
 import { HiOutlineMenu } from "react-icons/hi";
 import { logo } from "../../assets/index";
 import { HiOutlineLogout } from "react-icons/hi";
-import { useAuthContext } from "../../context/auth/AuthContextProvider";
+import { useGlobalContext } from "../../context/auth/AuthContextProvider";
 import { LogOut } from "../../context/actions/constants/actionCreators";
 
 const NavLinks = ({ handleClick }) => {
-  const { dispatch } = useAuthContext();
+  const { dispatch } = useGlobalContext();
   return (
     <div className="mt-10">
       {links.map((item) => (

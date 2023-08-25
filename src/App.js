@@ -5,11 +5,11 @@ import SideBar from "./components/SideBar/SideBar";
 import TopPlay from "./components/TopPlay/TopPlay";
 import SearchBar from "./components/SearchBar/SearchBar";
 import MusicPlayer from "./components/MusicPlayer/index";
-import { useAuthContext } from "./context/auth/AuthContextProvider";
+import { useGlobalContext } from "./context/auth/AuthContextProvider";
 import Header from "./components/LandingUI/Header";
 
 function App() {
-  const { state } = useAuthContext();
+  const { state } = useGlobalContext();
   return (
     <div className="relative flex">
       {state.isAuthenticated && <SideBar />}

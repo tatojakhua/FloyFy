@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { FaPauseCircle, FaPlayCircle } from "react-icons/fa";
-import { useAuthContext } from "../../context/auth/AuthContextProvider";
+import { useGlobalContext } from "../../context/auth/AuthContextProvider";
 
 const PlayPause = ({ handlePause, handlePlay, song }) => {
-  const { state } = useAuthContext();
+  const { state } = useGlobalContext();
   return (
     <>
       {state.isPlaying &&

@@ -1,8 +1,8 @@
 import React from "react";
-import { useAuthContext } from "../../context/auth/AuthContextProvider";
+import { useGlobalContext } from "../../context/auth/AuthContextProvider";
 
 const Track = () => {
-  const { state } = useAuthContext();
+  const { state } = useGlobalContext();
   const subtitle =
     state.activeSong?.heading?.subtitle || state.activeSong?.subtitle;
   const title = state.activeSong?.heading?.title || state.activeSong?.title;

@@ -8,7 +8,7 @@ import {
   BsShuffle,
 } from "react-icons/bs";
 import { HiOutlineHeart } from "react-icons/hi";
-import { useAuthContext } from "../../context/auth/AuthContextProvider";
+import { useGlobalContext } from "../../context/auth/AuthContextProvider";
 import { addFavoriteMusic } from "../../context/actions/constants/actionCreators";
 
 const Controls = ({
@@ -20,7 +20,7 @@ const Controls = ({
   handlePrevSong,
   handleNextSong,
 }) => {
-  const { state, dispatch } = useAuthContext();
+  const { state, dispatch } = useGlobalContext();
   const handleAddFavoriteMusic = () => {
     dispatch(addFavoriteMusic());
   };

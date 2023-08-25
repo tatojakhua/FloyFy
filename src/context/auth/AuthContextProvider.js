@@ -4,8 +4,8 @@ import { authReducer, initialState } from "./authReducer";
 import { isTokenValid } from "../../utils/jwt";
 import { authenticateAction } from "../actions/constants/actionCreators";
 
-const authContext = createContext();
-const AuthContextProvider = ({ children }) => {
+const Context = createContext();
+const ContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(authReducer, initialState);
   useEffect(() => {
     const token = localStorage.getItem("accessToken");
@@ -15,18 +15,16 @@ const AuthContextProvider = ({ children }) => {
     }
   }, []);
   return (
-    <authContext.Provider value={{ state, dispatch }}>
-      {children}
-    </authContext.Provider>
+    <Context.Provider value={{ state, dispatch }}>{children}</Context.Provider>
   );
 };
 
-export const useAuthContext = () => {
-  const context = useContext(authContext);
+export const useGlobalContext = () => {
+  const context = useContext(Context);
   if (context) {
     return context;
   }
-  throw new Error("authContext problem");
+  throw new Error("Context problem");
 };
 
-export default AuthContextProvider;
+export default ContextProvider;

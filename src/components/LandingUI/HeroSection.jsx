@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { SIGN_UP } from "../../constants/routes";
 
 const HeroSection = () => {
   return (
@@ -11,7 +13,7 @@ const HeroSection = () => {
           Discover, Listen, and Enjoy
         </p>
         <button className="bg-[#2a2a80] hover:bg-blue-800 font-bold text-white px-6 py-2 rounded-full">
-          Get Started
+          <Link to={SIGN_UP}>Get Started</Link>
         </button>
       </div>
     </section>
