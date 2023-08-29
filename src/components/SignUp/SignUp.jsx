@@ -23,7 +23,13 @@ const SignUp = () => {
       .then(() => {
         navigate(SIGN_IN);
       })
-      .catch((error) => seterror(error.message))
+      .catch((error) => {
+        if (JSON.stringify(error.message).includes("E11000")) {
+          seterror("This user is already exists");
+        } else {
+          seterror(error.message);
+        }
+      })
       .finally(() => {
         setloading(false);
       });
@@ -33,34 +39,15 @@ const SignUp = () => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
-  if (error) {
-    return (
-      <div className="min-h-screen flex flex-col items-center justify-center text-right">
-        <h1
-          className="font-bold text-2xl text-white mt-2 w-5/12 text-start
-        "
-        >
-          {error}
-        </h1>
-        <button
-          className="cursor-pointer px-4 py-2 bg-slate-900 text-white rounded-full m-4"
-          onClick={() => navigate(window.location.reload())}
-        >
-          Back
-        </button>
-      </div>
-    );
-  }
-
   if (loading) {
     return (
-      <div className="h-[520px] mt-20">
-        <Loader title={"Don't expect quick results, this demands time."} />;
+      <div className="h-[520px] w-full flex justify-center items-center flex-col">
+        <Loader />;
       </div>
     );
   }
   return (
-    <div className="flex items-center justify-center min-h-screen">
+    <div className="flex items-center justify-center min-h-screen mt-10">
       <div className="animate-slideup bg-gradient-to-br from-white/10 to-[#2a2a80] backdrop-blur-lg p-8 rounded shadow-md max-w-md w-full">
         <h2 className="text-2xl font-semibold mb-4 text-white">Sign Up</h2>
         <form onSubmit={signUpHandler}>
@@ -72,6 +59,9 @@ const SignUp = () => {
               onChange={handleChange}
             />
           ))}
+          <span className="text-center pb-2 text-yellow-500 text-xs block">
+            {error}
+          </span>
           <button
             type="submit"
             className="w-full animate-slideup bg-gradient-to-br from-white/10 to-[#2a2a80] backdrop-blur-lg text-white py-2 rounded hover:bg-blue-800"

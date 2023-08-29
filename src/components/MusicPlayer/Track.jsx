@@ -7,7 +7,7 @@ const Track = () => {
     state.activeSong?.heading?.subtitle || state.activeSong?.subtitle;
   const title = state.activeSong?.heading?.title || state.activeSong?.title;
   return (
-    <div className="flex-1 flex items-center justify-start">
+    <div className="flex-1 flex items-center justify-center xl:text-start sm:text-start text-center">
       <div
         className={`${
           state.isPlaying && state.isActive
@@ -24,7 +24,7 @@ const Track = () => {
           className="rounded-full"
         />
       </div>
-      <div className="w-[50%]">
+      <div className="xl:w-[50%]">
         <p className="truncate text-white font-bold text-lg">
           {state.activeSong?.heading?.title || state.activeSong?.title
             ? title.slice(0, 25)

@@ -90,7 +90,7 @@ const TopPlay = () => {
         <div className="flex flex-row justify-between items-center">
           <h2 className="text-white font-bold text-2xl ">Favorites</h2>
         </div>
-        <div className="mt-4 flex flex-col gap-1">
+        <div className="mt-4 flex flex-col pb-28 gap-1">
           {topPlay?.map((song, i) => (
             <TopChartCard
               key={song.key}

@@ -36,13 +36,13 @@ const SignIn = () => {
   };
   if (loading) {
     return (
-      <div className="h-[520px] mt-20">
+      <div className="h-[520px] w-full flex justify-center items-center flex-col">
         <Loader />;
       </div>
     );
   }
   return (
-    <div className="flex items-center justify-center min-h-screen">
+    <div className="flex items-center justify-center min-h-screen mt-10">
       <div className="animate-slideup bg-gradient-to-br from-white/10 to-[#2a2a80] backdrop-blur-lg p-8 rounded shadow-md max-w-md w-full">
         <h2 className="text-2xl font-semibold mb-4 text-white">Sign In</h2>
         <form onSubmit={signInHandler}>

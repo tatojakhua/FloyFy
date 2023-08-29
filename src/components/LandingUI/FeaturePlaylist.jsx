@@ -8,7 +8,7 @@ const FeaturedPlaylists = () => {
   return (
     <section className="py-16  bg-[#191624]">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold mb-4 text-white">
+        <h2 className="text-4xl font-bold mb-4 text-center text-white">
           Featured Playlists
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

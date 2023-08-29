@@ -25,7 +25,7 @@ const Controls = ({
     dispatch(addFavoriteMusic());
   };
   return (
-    <div className="flex items-center justify-between md:w-36 lg:w-52 2xl:w-80">
+    <div className="flex items-center">
       <BsArrowRepeat
         size={20}
         color={repeat ? "red" : "white"}

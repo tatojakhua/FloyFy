@@ -7,13 +7,17 @@ const Header = () => {
   return (
     <header className="animate-slidedown bg-gradient-to-br from-white/10 to-[#2a2a80] backdrop-blur-lg rounded-b-3xl fixed z-10 top-0 left-0 w-full h-15 py-3">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="xs:ml-4">
+        <div className="sm: ml-6">
           <Link to={HOME_PAGE}>
-            <img src={logo} alt="logo" className="w-full h-14 object-contain" />
+            <img
+              src={logo}
+              alt="logo"
+              className="w-16 h-10 object-contain xl:h-14 xl:w-full sm:w-full"
+            />
           </Link>
         </div>
         <nav>
-          <ul className="flex space-x-4">
+          <ul className="flex space-x-4 pr-6">
             <li>
               <NavLink
                 to={HOME_PAGE}

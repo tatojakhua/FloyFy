@@ -13,7 +13,7 @@ const SearchBar = () => {
     <form
       onSubmit={handleSubmit}
       autoComplete="off"
-      className="p-2 text-gray-400 focus-within:text-gray-600 max-w-sm"
+      className="p-2 text-gray-400 focus-within:text-gray-600 xl:max-w-sm sm:max-w-md max-w-[300px]"
     >
       <label htmlFor="search-field" className="sr-only">
         Search all files
