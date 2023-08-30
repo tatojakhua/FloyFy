@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const Form = ({ label, onChange, errorMessage, ...inputProps }) => {
   const [focused, setfocused] = useState(false);
   const handleFocuse = () => {
-    if (inputProps?.value?.match(inputProps.pattern)) {
+    if (inputProps.value.match(inputProps.pattern)) {
       setfocused(false);
     } else {
       setfocused(true);

@@ -60,7 +60,7 @@ export const inputs = [
     errorMessage:
       "Username should be 3-16 characters and shouldn`t include any special characters!",
     label: "User name",
-    pattern: "^[A-Za-z0-9]{3,16}$",
+    pattern: "^[A-Za-z0-9ა-ჰ]{3,16}$",
     required: true,
   },
   {
@@ -71,7 +71,7 @@ export const inputs = [
     errorMessage:
       "It should be a valid email addres and should matched gmail.com!",
     label: "Email",
-    pattern: "[a-zA-Z0-9]+.[a-zA-Z0-9]+@gmail.com",
+    pattern: "[a-zA-Z0-9._+-]+[a-zA-Z0-9]+@gmail.com",
     required: true,
   },
   {

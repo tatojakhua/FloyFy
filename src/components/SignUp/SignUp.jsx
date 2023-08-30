@@ -41,7 +41,7 @@ const SignUp = () => {
 
   if (loading) {
     return (
-      <div className="h-[520px] w-full flex justify-center items-center flex-col">
+      <div className="h-screen w-full flex justify-center items-center flex-col">
         <Loader />;
       </div>
     );
